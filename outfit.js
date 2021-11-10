@@ -15,13 +15,12 @@ function choose_random_item() {
     document.getElementById('image').src = `./images/${selected_image}`;
 }
 
-// document.body.innerHTML = randomItem;
+setTimeout(() => {
+    console.log("the callback works")
+}, 2000);
 
-
-//     let image = myArray[randomItem];
-//     document.getElementsById('img').src = myArray[randomItem];
-// }
-
-
-// selected_item = myArray[randomItem]
-// document.getElementsByTagName('img').src = myArray[randomItem];
+window.onload = function() {
+    document.querySelector("#callback").addEventListener("click", function() {
+        console.log("Button was clicked")
+    });
+}
